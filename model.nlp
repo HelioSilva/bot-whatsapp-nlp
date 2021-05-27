@@ -1,0 +1,460 @@
+{
+  "settings": {
+    "languages": [
+      "pt"
+    ],
+    "forceNER": true,
+    "tag": "nlp",
+    "threshold": 0.5,
+    "autoLoad": true,
+    "autoSave": true,
+    "modelFileName": "model.nlp",
+    "calculateSentiment": true
+  },
+  "nluManager": {
+    "settings": {
+      "tag": "nlu-manager"
+    },
+    "locales": [
+      "pt"
+    ],
+    "languageNames": {},
+    "domainManagers": {
+      "pt": {
+        "settings": {
+          "locale": "pt",
+          "trainByDomain": false,
+          "tag": "domain-manager-pt",
+          "nluByDomain": {
+            "default": {
+              "className": "NeuralNlu",
+              "settings": {}
+            }
+          },
+          "useStemDict": true
+        },
+        "stemDict": {
+          "oi": {
+            "intent": "saudacao",
+            "domain": "default"
+          },
+          "bem,tud": {
+            "intent": "saudacao",
+            "domain": "default"
+          },
+          "boa,tard": {
+            "intent": "saudacao",
+            "domain": "default"
+          },
+          "boa,noit": {
+            "intent": "saudacao",
+            "domain": "default"
+          },
+          "bom,dia": {
+            "intent": "saudacao",
+            "domain": "default"
+          },
+          "ae,e": {
+            "intent": "saudacao",
+            "domain": "default"
+          },
+          "fic,localiz,onde": {
+            "intent": "localizacao",
+            "domain": "default"
+          },
+          "de,o,pont,qual,referenc": {
+            "intent": "localizacao",
+            "domain": "default"
+          },
+          "enderec,o,qual": {
+            "intent": "localizacao",
+            "domain": "default"
+          },
+          "a,da,empres,localizaca,qual": {
+            "intent": "localizacao",
+            "domain": "default"
+          }
+        },
+        "intentDict": {
+          "saudacao": "default",
+          "localizacao": "default"
+        },
+        "sentences": [
+          {
+            "domain": "default",
+            "utterance": "oi",
+            "intent": "saudacao"
+          },
+          {
+            "domain": "default",
+            "utterance": "tudo bem",
+            "intent": "saudacao"
+          },
+          {
+            "domain": "default",
+            "utterance": "boa tarde",
+            "intent": "saudacao"
+          },
+          {
+            "domain": "default",
+            "utterance": "boa noite",
+            "intent": "saudacao"
+          },
+          {
+            "domain": "default",
+            "utterance": "bom dia",
+            "intent": "saudacao"
+          },
+          {
+            "domain": "default",
+            "utterance": "e ae",
+            "intent": "saudacao"
+          },
+          {
+            "domain": "default",
+            "utterance": "onde fica localizada",
+            "intent": "localizacao"
+          },
+          {
+            "domain": "default",
+            "utterance": "qual o ponto de referencia",
+            "intent": "localizacao"
+          },
+          {
+            "domain": "default",
+            "utterance": "qual o endereço",
+            "intent": "localizacao"
+          },
+          {
+            "domain": "default",
+            "utterance": "qual a localizacao da empresa",
+            "intent": "localizacao"
+          }
+        ],
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "locale": "pt",
+              "tag": "nlu-pt",
+              "keepStopwords": true,
+              "nonefeatureValue": 1,
+              "nonedeltaMultiplier": 1.2,
+              "spellCheck": false,
+              "spellCheckDistance": 1,
+              "filterZeros": true,
+              "log": true
+            },
+            "features": {
+              "oi": 1,
+              "tud": 1,
+              "bem": 1,
+              "boa": 1,
+              "tard": 1,
+              "noit": 1,
+              "bom": 1,
+              "dia": 1,
+              "e": 1,
+              "ae": 1,
+              "onde": 1,
+              "fic": 1,
+              "localiz": 1,
+              "qual": 1,
+              "o": 1,
+              "pont": 1,
+              "de": 1,
+              "referenc": 1,
+              "enderec": 1,
+              "a": 1,
+              "localizaca": 1,
+              "da": 1,
+              "empres": 1
+            },
+            "intents": {
+              "saudacao": 1,
+              "localizacao": 1
+            },
+            "intentFeatures": {
+              "saudacao": {
+                "oi": 1,
+                "tud": 1,
+                "bem": 1,
+                "boa": 1,
+                "tard": 1,
+                "noit": 1,
+                "bom": 1,
+                "dia": 1,
+                "e": 1,
+                "ae": 1
+              },
+              "localizacao": {
+                "onde": 1,
+                "fic": 1,
+                "localiz": 1,
+                "qual": 1,
+                "o": 1,
+                "pont": 1,
+                "de": 1,
+                "referenc": 1,
+                "enderec": 1,
+                "a": 1,
+                "localizaca": 1,
+                "da": 1,
+                "empres": 1
+              }
+            },
+            "featuresToIntent": {
+              "oi": [
+                "saudacao"
+              ],
+              "tud": [
+                "saudacao"
+              ],
+              "bem": [
+                "saudacao"
+              ],
+              "boa": [
+                "saudacao"
+              ],
+              "tard": [
+                "saudacao"
+              ],
+              "noit": [
+                "saudacao"
+              ],
+              "bom": [
+                "saudacao"
+              ],
+              "dia": [
+                "saudacao"
+              ],
+              "e": [
+                "saudacao"
+              ],
+              "ae": [
+                "saudacao"
+              ],
+              "onde": [
+                "localizacao"
+              ],
+              "fic": [
+                "localizacao"
+              ],
+              "localiz": [
+                "localizacao"
+              ],
+              "qual": [
+                "localizacao"
+              ],
+              "o": [
+                "localizacao"
+              ],
+              "pont": [
+                "localizacao"
+              ],
+              "de": [
+                "localizacao"
+              ],
+              "referenc": [
+                "localizacao"
+              ],
+              "enderec": [
+                "localizacao"
+              ],
+              "a": [
+                "localizacao"
+              ],
+              "localizaca": [
+                "localizacao"
+              ],
+              "da": [
+                "localizacao"
+              ],
+              "empres": [
+                "localizacao"
+              ]
+            },
+            "neuralNetwork": {
+              "settings": {
+                "locale": "pt",
+                "tag": "nlu-pt",
+                "keepStopwords": true,
+                "nonefeatureValue": 1,
+                "nonedeltaMultiplier": 1.2,
+                "spellCheck": false,
+                "spellCheckDistance": 1,
+                "filterZeros": true,
+                "log": true
+              },
+              "features": [
+                "oi",
+                "tud",
+                "bem",
+                "boa",
+                "tard",
+                "noit",
+                "bom",
+                "dia",
+                "e",
+                "ae",
+                "onde",
+                "fic",
+                "localiz",
+                "qual",
+                "o",
+                "pont",
+                "de",
+                "referenc",
+                "enderec",
+                "a",
+                "localizaca",
+                "da",
+                "empres"
+              ],
+              "intents": [
+                "saudacao",
+                "localizacao"
+              ],
+              "perceptrons": [
+                [
+                  6.383852481842041,
+                  3.3891546726226807,
+                  3.3891546726226807,
+                  4.506274223327637,
+                  2.2664058208465576,
+                  2.243258237838745,
+                  3.392704486846924,
+                  3.392704486846924,
+                  3.3936076164245605,
+                  3.3936076164245605,
+                  -2.506880521774292,
+                  -2.506880521774292,
+                  -2.506880521774292,
+                  -3.4993069171905518,
+                  -2.470728635787964,
+                  -0.8132460713386536,
+                  -0.8132460713386536,
+                  -0.8132460713386536,
+                  -1.5510108470916748,
+                  -1.0184673070907593,
+                  -1.0184673070907593,
+                  -1.0184673070907593,
+                  -1.0184673070907593,
+                  7.538266707044887
+                ],
+                [
+                  -1.7669817209243774,
+                  -0.9756012558937073,
+                  -0.9756012558937073,
+                  -1.3680107593536377,
+                  -0.6957674026489258,
+                  -0.6434627771377563,
+                  -0.9569408893585205,
+                  -0.9569408893585205,
+                  -0.9521034359931946,
+                  -0.9521034359931946,
+                  4.143511772155762,
+                  4.143511772155762,
+                  4.143511772155762,
+                  5.604747772216797,
+                  3.8951916694641113,
+                  0.9847981929779053,
+                  0.9847981929779053,
+                  0.9847981929779053,
+                  2.90995717048645,
+                  1.7085258960723877,
+                  1.7085258960723877,
+                  1.7085258960723877,
+                  1.7085258960723877,
+                  1.8472928081915463
+                ]
+              ]
+            }
+          }
+        }
+      }
+    },
+    "intentDomains": {},
+    "extraSentences": [
+      [
+        "pt",
+        "oi"
+      ],
+      [
+        "pt",
+        "tudo bem"
+      ],
+      [
+        "pt",
+        "boa tarde"
+      ],
+      [
+        "pt",
+        "boa noite"
+      ],
+      [
+        "pt",
+        "bom dia"
+      ],
+      [
+        "pt",
+        "e ae"
+      ],
+      [
+        "pt",
+        "onde fica localizada"
+      ],
+      [
+        "pt",
+        "qual o ponto de referencia"
+      ],
+      [
+        "pt",
+        "qual o endereço"
+      ],
+      [
+        "pt",
+        "qual a localizacao da empresa"
+      ]
+    ]
+  },
+  "ner": {
+    "settings": {
+      "tag": "ner",
+      "entityPreffix": "%",
+      "entitySuffix": "%"
+    },
+    "rules": {}
+  },
+  "nlgManager": {
+    "settings": {
+      "tag": "nlg-manager"
+    },
+    "responses": {
+      "pt": {
+        "saudacao": [
+          {
+            "answer": "Olá, eu sou uma atendente virtual e estou aqui para te ajudar.\nQual sua duvida?"
+          },
+          {
+            "answer": "Olá, sou um BOT. Adoro tirar dúvidas, qual é a sua?"
+          }
+        ],
+        "localizacao": [
+          {
+            "answer": "Ficamos localizados na Rua X, nº1000, Centro de Maceió.\nPróximo aos Correios."
+          },
+          {
+            "answer": "Blz, vou te mandar a localizacao no mapa!"
+          }
+        ]
+      }
+    }
+  },
+  "actionManager": {
+    "settings": {
+      "tag": "action-manager"
+    },
+    "actions": {}
+  },
+  "slotManager": {}
+}
